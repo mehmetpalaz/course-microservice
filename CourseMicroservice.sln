@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{0D74C0C5-8352-4DA3-9A7E-48C7FE575953}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "catalog", "catalog", "{4DEA1291-E487-480B-87B5-85131A869F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseMicroservice.Catalog.Api", "CourseMicroservice.Catalog.Api\CourseMicroservice.Catalog.Api.csproj", "{3E6B5B55-9117-49F4-880F-577605B5D276}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E6B5B55-9117-49F4-880F-577605B5D276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E6B5B55-9117-49F4-880F-577605B5D276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E6B5B55-9117-49F4-880F-577605B5D276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E6B5B55-9117-49F4-880F-577605B5D276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D74C0C5-8352-4DA3-9A7E-48C7FE575953} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{4DEA1291-E487-480B-87B5-85131A869F5A} = {0D74C0C5-8352-4DA3-9A7E-48C7FE575953}
+		{3E6B5B55-9117-49F4-880F-577605B5D276} = {4DEA1291-E487-480B-87B5-85131A869F5A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18BBB389-6D7A-49FD-9798-5CEB0B61C751}
+	EndGlobalSection
+EndGlobal
