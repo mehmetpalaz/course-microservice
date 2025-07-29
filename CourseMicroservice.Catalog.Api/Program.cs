@@ -1,3 +1,4 @@
+using CourseMicroservice.Catalog.Api.Features.Categories;
 using CourseMicroservice.Catalog.Api.Options;
 using CourseMicroservice.Catalog.Api.Repositories;
 
@@ -9,6 +10,8 @@ builder.Services.AddOptionsExt();
 builder.Services.AddDbContextExt();
 
 var app = builder.Build();
+
+app.AddCategoryEnpointExt();
 
 if (app.Environment.IsDevelopment())
 {
