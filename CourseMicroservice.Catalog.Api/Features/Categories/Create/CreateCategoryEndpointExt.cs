@@ -1,4 +1,5 @@
 ﻿using CourseMicroservice.Shared.Extensions;
+using CourseMicroservice.Shared.Filters;
 using MediatR;
 
 namespace CourseMicroservice.Catalog.Api.Features.Categories.Create
@@ -12,7 +13,7 @@ namespace CourseMicroservice.Catalog.Api.Features.Categories.Create
                 var result = await mediator.Send(command);
 
                 return result.ToEndpointResult();
-            });
+            }).AddEndpointFilter<ValidationFilter<CreateCategoryCommand>>();
 
             return routeGroup;
         }
