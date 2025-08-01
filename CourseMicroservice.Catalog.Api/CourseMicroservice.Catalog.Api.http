@@ -1,4 +1,5 @@
 @baseUrl = http://localhost:5262/api
+@categoryId = 08ddce8e-eb86-89c1-0009-0faa00010000
 
 GET {{baseUrl}}/categories/
 Accept: application/json
@@ -11,4 +12,8 @@ Content-Type: application/json
 {
   "name": "New Category",
 }
+###
+
+GET {{baseUrl}}/categories/{{categoryId}}
+Accept: application/json
 ###
