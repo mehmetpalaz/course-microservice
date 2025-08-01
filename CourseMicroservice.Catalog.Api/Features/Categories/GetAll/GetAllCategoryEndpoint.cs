@@ -1,4 +1,5 @@
 ﻿using Amazon.Runtime.Internal;
+using AutoMapper;
 using CourseMicroservice.Catalog.Api.Features.Categories.Create;
 using CourseMicroservice.Catalog.Api.Features.Categories.Dtos;
 using CourseMicroservice.Catalog.Api.Repositories;
@@ -12,15 +13,16 @@ namespace CourseMicroservice.Catalog.Api.Features.Categories.GetAll
 {
     public record GetAllCategoryQuery : IRequest<ServiceResult<List<CategoryDto>>>;
 
-    public class GetAllCategoryQueryHandler(AppDbContext context) : IRequestHandler<GetAllCategoryQuery, ServiceResult<List<CategoryDto>>>
+    public class GetAllCategoryQueryHandler(AppDbContext context, IMapper mapper) : IRequestHandler<GetAllCategoryQuery, ServiceResult<List<CategoryDto>>>
     {
         public async Task<ServiceResult<List<CategoryDto>>> Handle(GetAllCategoryQuery request, CancellationToken cancellationToken)
         {
             var categories = await context.Categories
-                .Select(c => new CategoryDto(c.Id, c.Name))
                 .ToListAsync(cancellationToken);
 
-            return ServiceResult<List<CategoryDto>>.SuccessAsOk(categories);
+            var mappedCategories = mapper.Map<List<CategoryDto>>(categories);
+
+            return ServiceResult<List<CategoryDto>>.SuccessAsOk(mappedCategories);
         }
     }
 
