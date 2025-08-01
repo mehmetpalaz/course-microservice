@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CourseMicroservice.Catalog.Api.Features.Categories.GetAll
 {
-    public record GetAllCategoryQuery : IRequest<ServiceResult<List<CategoryDto>>>;
+    public record GetAllCategoryQuery : IRequestByServiceResult<List<CategoryDto>>;
 
     public class GetAllCategoryQueryHandler(AppDbContext context, IMapper mapper) : IRequestHandler<GetAllCategoryQuery, ServiceResult<List<CategoryDto>>>
     {
