@@ -1,6 +1,14 @@
-@CourseMicroservice.Catalog.Api_HostAddress = http://localhost:5262
+@baseUrl = http://localhost:5262/api
 
-GET {{CourseMicroservice.Catalog.Api_HostAddress}}/weatherforecast/
+GET {{baseUrl}}/categories/
 Accept: application/json
 
+###
+
+POST {{baseUrl}}/categories/
+Accept: application/json
+Content-Type: application/json
+{
+  "name": "New Category",
+}
 ###
