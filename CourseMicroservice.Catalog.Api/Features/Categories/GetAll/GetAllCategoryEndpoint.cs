@@ -1,13 +1,5 @@
-﻿using Amazon.Runtime.Internal;
-using AutoMapper;
-using CourseMicroservice.Catalog.Api.Features.Categories.Create;
-using CourseMicroservice.Catalog.Api.Features.Categories.Dtos;
+﻿using CourseMicroservice.Catalog.Api.Features.Categories.Dtos;
 using CourseMicroservice.Catalog.Api.Repositories;
-using CourseMicroservice.Shared;
-using CourseMicroservice.Shared.Extensions;
-using CourseMicroservice.Shared.Filters;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace CourseMicroservice.Catalog.Api.Features.Categories.GetAll
 {

@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using CourseMicroservice.Catalog.Api.Features.Categories.Dtos;
+﻿using CourseMicroservice.Catalog.Api.Features.Categories.Dtos;
 
 namespace CourseMicroservice.Catalog.Api.Features.Categories
 {

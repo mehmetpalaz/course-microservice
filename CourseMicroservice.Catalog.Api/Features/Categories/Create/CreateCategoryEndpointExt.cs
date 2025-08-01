@@ -1,6 +1,5 @@
 ﻿using CourseMicroservice.Shared.Extensions;
 using CourseMicroservice.Shared.Filters;
-using MediatR;
 
 namespace CourseMicroservice.Catalog.Api.Features.Categories.Create
 {

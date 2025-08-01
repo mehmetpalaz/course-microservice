@@ -1,8 +1,5 @@
-﻿using AutoMapper;
-using CourseMicroservice.Catalog.Api.Features.Categories.Dtos;
+﻿using CourseMicroservice.Catalog.Api.Features.Categories.Dtos;
 using CourseMicroservice.Catalog.Api.Repositories;
-using CourseMicroservice.Shared;
-using MediatR;
 
 namespace CourseMicroservice.Catalog.Api.Features.Categories.GetById
 {

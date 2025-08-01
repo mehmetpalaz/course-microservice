@@ -1,6 +1,5 @@
 ﻿using CourseMicroservice.Catalog.Api.Features.Categories;
 using CourseMicroservice.Catalog.Api.Features.Courses;
-using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
 
 namespace CourseMicroservice.Catalog.Api.Repositories

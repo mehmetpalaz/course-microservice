@@ -1,7 +1,4 @@
-﻿using CourseMicroservice.Shared.Extensions;
-using MediatR;
-
-namespace CourseMicroservice.Catalog.Api.Features.Categories.GetById
+﻿namespace CourseMicroservice.Catalog.Api.Features.Categories.GetById
 {
     public static class GetCategoryByIdEndpoint
     {

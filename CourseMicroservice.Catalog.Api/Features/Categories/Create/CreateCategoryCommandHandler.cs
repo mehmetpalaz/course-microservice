@@ -1,9 +1,4 @@
 ﻿using CourseMicroservice.Catalog.Api.Repositories;
-using CourseMicroservice.Shared;
-using MassTransit;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-using System.Net;
 
 namespace CourseMicroservice.Catalog.Api.Features.Categories.Create
 {
