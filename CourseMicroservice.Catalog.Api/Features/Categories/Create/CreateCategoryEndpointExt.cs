@@ -12,7 +12,8 @@ namespace CourseMicroservice.Catalog.Api.Features.Categories.Create
                 var result = await mediator.Send(command);
 
                 return result.ToEndpointResult();
-            }).AddEndpointFilter<ValidationFilter<CreateCategoryCommand>>();
+            }).WithName("CreateCategory")
+                .AddEndpointFilter<ValidationFilter<CreateCategoryCommand>>();
 
             return routeGroup;
         }

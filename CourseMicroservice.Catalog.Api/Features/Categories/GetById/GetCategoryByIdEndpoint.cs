@@ -9,7 +9,7 @@
                 var result = await mediator.Send(new GetCategoryByIdQuery(id));
 
                 return result.ToEndpointResult();
-            });
+            }).WithName("GetCategoryById");
 
             return routeGroup;
         }

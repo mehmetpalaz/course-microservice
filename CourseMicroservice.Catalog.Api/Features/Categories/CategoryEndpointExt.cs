@@ -9,6 +9,7 @@ namespace CourseMicroservice.Catalog.Api.Features.Categories
         public static WebApplication AddCategoryEnpointExt(this WebApplication app)
         {
             app.MapGroup("/api/categories")
+                .WithTags("Categories")
                 .CreateCategoryGroupItem()
                 .GetAllCategoryGroupItem()
                 .GetCategoryByIdGroupItem();

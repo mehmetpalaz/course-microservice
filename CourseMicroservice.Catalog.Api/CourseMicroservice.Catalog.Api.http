@@ -1,5 +1,6 @@
 @baseUrl = http://localhost:5262/api
 @categoryId = 08ddce8e-eb86-89c1-0009-0faa00010000
+@courseId = 08ddd14e-94f8-4313-0009-0faa00010000
 
 GET {{baseUrl}}/categories/
 Accept: application/json
@@ -17,3 +18,37 @@ Content-Type: application/json
 GET {{baseUrl}}/categories/{{categoryId}}
 Accept: application/json
 ###
+
+POST {{baseUrl}}/courses/
+Accept: application/json
+Content-Type: application/json
+{
+  "name": "New Course",
+  "description": "This is a new course.",
+  "price": 99.99,
+  "imageUrl": "https://example.com/image.jpg",
+  "categoryId": "{{categoryId}}"
+}
+###
+GET {{baseUrl}}/courses/
+Accept: application/json
+###
+GET {{baseUrl}}/courses/{{courseId}}
+Accept: application/json
+###
+PUT {{baseUrl}}/courses/
+Accept: application/json
+Content-Type: application/json
+{
+  "id": "{{courseId}}",
+  "name": "New Course Updated",
+  "description": "This is a new course.",
+  "price": 1.99,
+  "imageUrl": "https://example.com/image.jpg",
+  "categoryId": "{{categoryId}}"
+} 
+
+  ###
+
+ DELETE {{baseUrl}}/courses/08ddd1bc-3aa6-5e5a-0009-0faa00010000
+Accept: application/json
