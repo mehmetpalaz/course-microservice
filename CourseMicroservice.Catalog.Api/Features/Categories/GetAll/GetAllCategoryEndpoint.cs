@@ -28,7 +28,7 @@ namespace CourseMicroservice.Catalog.Api.Features.Categories.GetAll
 
                 return result.ToEndpointResult();
 
-            });
+            }).WithName("GetAllCategory");
 
             return routeGroup;
         }
