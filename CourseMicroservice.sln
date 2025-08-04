@@ -15,7 +15,7 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{95EDA26C-D761-409D-BA8F-B75B345E4D9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseMicroservice.Shared", "..\CourseMicroservice.Shared\CourseMicroservice.Shared.csproj", "{B9FAC000-9C55-4C84-B5AE-335A257CCD30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseMicroservice.Shared", "CourseMicroservice.Shared\CourseMicroservice.Shared.csproj", "{B9FAC000-9C55-4C84-B5AE-335A257CCD30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
