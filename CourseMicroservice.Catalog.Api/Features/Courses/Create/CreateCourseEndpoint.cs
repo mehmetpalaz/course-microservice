@@ -11,6 +11,7 @@ namespace CourseMicroservice.Catalog.Api.Features.Courses.Create
                 var result = await mediator.Send(command);
                 return result.ToEndpointResult();
             }).WithName("CreateCourse")
+            .MapToApiVersion(1, 0)
             .AddEndpointFilter<ValidationFilter<CreateCourseCommand>>()
             .Produces<ServiceResult<Guid>>(StatusCodes.Status201Created)
             .Produces<ServiceResult<Guid>>(StatusCodes.Status400BadRequest)

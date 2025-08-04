@@ -10,7 +10,7 @@
 
                 return await mediator.Send(query);
             })
-                .WithName("GetCourseById");
+                .WithName("GetCourseById").MapToApiVersion(1, 0);
 
             return app;
         }

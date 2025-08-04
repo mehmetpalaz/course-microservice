@@ -1,4 +1,4 @@
-@baseUrl = http://localhost:5262/api
+@baseUrl = http://localhost:5262/api/v1
 @categoryId = 08ddce8e-eb86-89c1-0009-0faa00010000
 @courseId = 08ddd14e-94f8-4313-0009-0faa00010000
 @userId = 08ddd1c1-84d9-d38c-0009-0faa00010000
@@ -12,7 +12,7 @@ POST {{baseUrl}}/categories/
 Accept: application/json
 Content-Type: application/json
 {
-  "name": "New Category",
+  "name": "New Category 2"
 }
 ###
 

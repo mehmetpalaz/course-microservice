@@ -10,7 +10,7 @@
                 
                 return result.ToEndpointResult();
 
-            }).WithName("GetAllCourse");
+            }).WithName("GetAllCourse").MapToApiVersion(1, 0);
            
             return app;
         }

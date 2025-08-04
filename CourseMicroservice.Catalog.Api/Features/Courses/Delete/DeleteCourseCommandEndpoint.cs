@@ -9,7 +9,7 @@
                 var result = await mediator.Send(new DeleteCourseCommand(id));
 
                 return result.ToEndpointResult();
-            }).WithName("DeleteCourse");
+            }).WithName("DeleteCourse").MapToApiVersion(1, 0);
 
             return app;
         }

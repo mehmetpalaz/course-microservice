@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddOptionsExt();
 builder.Services.AddDbContextExt();
 builder.Services.AddCommonServiceExt(typeof(CatalogAssembly));
+builder.Services.AddApiVersioningExt();
 
 var app = builder.Build();
 
@@ -28,8 +29,8 @@ app.AddSeedData().ContinueWith(x =>
 });
 
 
-app.AddCategoryEnpointExt();
-app.AddCourseEndpointsExt();
+app.AddCategoryEnpointExt(app.AddVersionSetExt());
+app.AddCourseEndpointsExt(app.AddVersionSetExt());
 
 if (app.Environment.IsDevelopment())
 {
