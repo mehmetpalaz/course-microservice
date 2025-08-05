@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{95EDA2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseMicroservice.Shared", "CourseMicroservice.Shared\CourseMicroservice.Shared.csproj", "{B9FAC000-9C55-4C84-B5AE-335A257CCD30}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "basket", "basket", "{6634BA1D-7001-48B8-B237-575FCB768BB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseMicroservice.Basket.Api", "CourseMicroservice.Basket.Api\CourseMicroservice.Basket.Api.csproj", "{B092AF9F-A4DF-47B8-81C5-7C2DF7AD092F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{B9FAC000-9C55-4C84-B5AE-335A257CCD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9FAC000-9C55-4C84-B5AE-335A257CCD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9FAC000-9C55-4C84-B5AE-335A257CCD30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B092AF9F-A4DF-47B8-81C5-7C2DF7AD092F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B092AF9F-A4DF-47B8-81C5-7C2DF7AD092F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B092AF9F-A4DF-47B8-81C5-7C2DF7AD092F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B092AF9F-A4DF-47B8-81C5-7C2DF7AD092F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +53,8 @@ Global
 		{3E6B5B55-9117-49F4-880F-577605B5D276} = {4DEA1291-E487-480B-87B5-85131A869F5A}
 		{95EDA26C-D761-409D-BA8F-B75B345E4D9F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B9FAC000-9C55-4C84-B5AE-335A257CCD30} = {95EDA26C-D761-409D-BA8F-B75B345E4D9F}
+		{6634BA1D-7001-48B8-B237-575FCB768BB3} = {0D74C0C5-8352-4DA3-9A7E-48C7FE575953}
+		{B092AF9F-A4DF-47B8-81C5-7C2DF7AD092F} = {6634BA1D-7001-48B8-B237-575FCB768BB3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18BBB389-6D7A-49FD-9798-5CEB0B61C751}
