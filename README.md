@@ -2,7 +2,7 @@
 
 A modern, scalable microservices-based course management platform built with .NET 8 and Clean Architecture principles.
 
-## ??? Architecture Overview
+## :building_construction: Architecture Overview
 
 This project implements a microservices architecture with the following services:
 
@@ -18,7 +18,7 @@ This project implements a microservices architecture with the following services
 - Notification Service
 - API Gateway
 
-## ??? Tech Stack
+## :hammer_and_wrench: Tech Stack
 
 - **Framework**: .NET 8
 - **Architecture**: Clean Architecture with CQRS pattern
@@ -32,7 +32,7 @@ This project implements a microservices architecture with the following services
   - ASP.NET Core API Versioning
 - **Containerization**: Docker & Docker Compose
 
-## ?? Getting Started
+## :rocket: Getting Started
 
 ### Prerequisites
 - .NET 8 SDK
@@ -41,32 +41,20 @@ This project implements a microservices architecture with the following services
 
 ### Running the Application
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
+1. **Clone the repository**git clone <repository-url>
    cd CourseMicroservice
-   ```
-
 2. **Set up environment variables**
    - Copy `.env.example` to `.env` (if exists)
    - Configure your database credentials
 
-3. **Start the infrastructure**
-   ```bash
-   docker-compose up -d
-   ```
+3. **Start the infrastructure**docker-compose up -d
+4. **Run the services**# Terminal 1 - Catalog API
+cd CourseMicroservice.Catalog.Api
+dotnet run
 
-4. **Run the services**
-   ```bash
-   # Terminal 1 - Catalog API
-   cd CourseMicroservice.Catalog.Api
-   dotnet run
-
-   # Terminal 2 - Basket API
-   cd CourseMicroservice.Basket.Api
-   dotnet run
-   ```
-
+# Terminal 2 - Basket API
+cd CourseMicroservice.Basket.Api
+dotnet run
 ### Available Services
 
 | Service | Port | Swagger UI |
@@ -81,25 +69,7 @@ This project implements a microservices architecture with the following services
 | Mongo Express | 27032 | MongoDB management UI |
 | Redis Commander | 27033 | Redis management UI |
 
-## ?? Project Structure
-
-```
-CourseMicroservice/
-??? CourseMicroservice.Catalog.Api/     # Course & Category management
-?   ??? Features/
-?   ?   ??? Categories/                 # Category CRUD operations
-?   ?   ??? Courses/                    # Course CRUD operations
-?   ??? Repositories/                   # Data access layer
-??? CourseMicroservice.Basket.Api/      # Shopping basket functionality
-?   ??? Features/
-?       ??? Baskets/                    # Basket operations
-??? CourseMicroservice.Shared/          # Shared libraries
-?   ??? Extensions/                     # Common service extensions
-?   ??? Filters/                        # Shared filters
-??? docker-compose.yml                 # Infrastructure setup
-```
-
-## ??? Architecture Patterns
+## :classical_building: Architecture Patterns
 
 - **Clean Architecture**: Clear separation of concerns with distinct layers
 - **CQRS (Command Query Responsibility Segregation)**: Separate read and write operations
@@ -107,32 +77,32 @@ CourseMicroservice/
 - **API Versioning**: Built-in support for API evolution
 - **Repository Pattern**: Data access abstraction
 
-## ?? Key Features
+## :wrench: Key Features
 
 ### Catalog Service
-- ? Course management (CRUD operations)
-- ? Category management
-- ? MongoDB integration with Entity Framework
-- ? Automatic data seeding
-- ? API versioning support
+- :white_check_mark: Course management (CRUD operations)
+- :white_check_mark: Category management
+- :white_check_mark: MongoDB integration with Entity Framework
+- :white_check_mark: Automatic data seeding
+- :white_check_mark: API versioning support
 
 ### Basket Service
-- ? Add items to basket
-- ? Redis caching for performance
-- ? API versioning support
+- :white_check_mark: Add items to basket
+- :white_check_mark: Redis caching for performance
+- :white_check_mark: API versioning support
 
 ### Shared Library
-- ? Common service extensions
-- ? Validation filters
-- ? API versioning configuration
-- ? MediatR integration
-- ? AutoMapper configuration
+- :white_check_mark: Common service extensions
+- :white_check_mark: Validation filters
+- :white_check_mark: API versioning configuration
+- :white_check_mark: MediatR integration
+- :white_check_mark: AutoMapper configuration
 
-## ?? Development Status
+## :arrows_counterclockwise: Development Status
 
 This project is in active development. The foundation has been established with core services, and additional microservices will be added incrementally.
 
-### Completed ?
+### Completed :white_check_mark:
 - Basic microservice infrastructure
 - Catalog service with full CRUD operations
 - Basket service foundation
@@ -141,12 +111,12 @@ This project is in active development. The foundation has been established with 
 - Input validation
 - Clean architecture implementation
 
-### In Progress ??
+### In Progress :construction:
 - Enhanced basket operations
 - Service-to-service communication
 - Error handling improvements
 
-### Planned ??
+### Planned :clipboard:
 - Authentication & Authorization
 - API Gateway implementation
 - Payment processing
@@ -155,11 +125,11 @@ This project is in active development. The foundation has been established with 
 - Monitoring & logging
 - Automated testing suite
 
-## ?? Contributing
+## :handshake: Contributing
 
 This is a learning and development project. Feel free to explore the code and suggest improvements!
 
-## ?? License
+## :page_facing_up: License
 
 This project is for educational and development purposes.
 
