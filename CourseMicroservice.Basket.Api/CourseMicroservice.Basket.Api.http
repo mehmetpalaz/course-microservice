@@ -1,6 +1,15 @@
-@CourseMicroservice.Basket.Api_HostAddress = http://localhost:5270
+@baseUrl = http://localhost:5270/api/v1
+@categoryId = 08ddce8e-eb86-89c1-0009-0faa00010000
+@courseId = 08ddd14e-94f8-4313-0009-0faa00010000
+@userId = 08ddd1c1-84d9-d38c-0009-0faa00010000
 
-GET {{CourseMicroservice.Basket.Api_HostAddress}}/weatherforecast/
+POST {{baseUrl}}/baskets/item
 Accept: application/json
-
+Content-Type: application/json
+{
+  "courseId": "{{courseId}}",
+  "courseName": "deneme kurs",
+  "coursePrice": 100,
+  "imageUrl": "asdf"
+}
 ###
