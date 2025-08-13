@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using CourseMicroservice.Shared.Services;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CourseMicroservice.Shared.Extensions
@@ -12,6 +13,8 @@ namespace CourseMicroservice.Shared.Extensions
             services.AddValidatorsFromAssemblyContaining(assembly);
 
             services.AddAutoMapper((c) => { }, assembly);
+
+            services.AddScoped<IIdentityService, IdentityService>();
 
             return services;
         }
