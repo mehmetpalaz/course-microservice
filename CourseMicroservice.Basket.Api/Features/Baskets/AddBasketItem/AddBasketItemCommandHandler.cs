@@ -1,17 +1,18 @@
 ﻿using CourseMicroservice.Basket.Api.Consts;
 using CourseMicroservice.Basket.Api.Dtos;
 using CourseMicroservice.Shared;
+using CourseMicroservice.Shared.Services;
 using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
 
 namespace CourseMicroservice.Basket.Api.Features.Baskets.AddBasketItem
 {
-    public class AddBasketItemCommandHandler(IDistributedCache distributedCache) : IRequestHandler<AddBasketItemCommand, ServiceResult>
+    public class AddBasketItemCommandHandler(IDistributedCache distributedCache, IIdentityService identityService) : IRequestHandler<AddBasketItemCommand, ServiceResult>
     {
         public async Task<ServiceResult> Handle(AddBasketItemCommand request, CancellationToken cancellationToken)
         {
-            var userId = Guid.NewGuid();
+            var userId = identityService.GetUserId;
 
             var basketKey = string.Format(BasketConsts.BasketRedisKey, userId);
 
@@ -28,7 +29,7 @@ namespace CourseMicroservice.Basket.Api.Features.Baskets.AddBasketItem
             else
             {
                 currentBasket = JsonSerializer.Deserialize<BasketDto>(basketString)!;
-                
+
                 var existingItem = currentBasket.BasketItems.FirstOrDefault(x => x.CourseId == request.CourseId);
 
                 if (existingItem is not null)
