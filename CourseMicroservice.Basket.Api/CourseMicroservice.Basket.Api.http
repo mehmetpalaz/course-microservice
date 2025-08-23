@@ -12,3 +12,16 @@ Content-Type: application/json
   "imageUrl": "asdf"
 }
 ###
+
+DELETE {{baseUrl}}/baskets/item
+Accept: application/json
+Content-Type: application/json
+{
+  "courseId": "{{courseId}}"
+}
+###
+
+Get {{baseUrl}}/baskets/user
+Accept: application/json
+Content-Type: application/json
+###
