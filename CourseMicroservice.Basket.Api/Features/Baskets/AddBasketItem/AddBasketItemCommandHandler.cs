@@ -5,6 +5,7 @@ using CourseMicroservice.Shared.Services;
 using MediatR;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
+using CourseMicroservice.Basket.Api.Data;
 
 namespace CourseMicroservice.Basket.Api.Features.Baskets.AddBasketItem
 {
@@ -18,26 +19,26 @@ namespace CourseMicroservice.Basket.Api.Features.Baskets.AddBasketItem
 
             var basketString = await distributedCache.GetStringAsync(basketKey, cancellationToken);
 
-            BasketDto currentBasket = null;
+            Data.Basket currentBasket = null;
 
-            var basketItem = new BasketItemDto(request.CourseId, request.CourseName, request.ImageUrl, request.CoursePrice, null);
+            var basketItem = new BasketItem(request.CourseId, request.CourseName, request.ImageUrl, request.CoursePrice, null);
 
             if (string.IsNullOrEmpty(basketString))
             {
-                currentBasket = new BasketDto(userId, [basketItem]);
+                currentBasket = new Data.Basket(userId, [basketItem]);
             }
             else
             {
-                currentBasket = JsonSerializer.Deserialize<BasketDto>(basketString)!;
+                currentBasket = JsonSerializer.Deserialize<Data.Basket>(basketString)!;
 
-                var existingItem = currentBasket.BasketItems.FirstOrDefault(x => x.CourseId == request.CourseId);
+                var existingItem = currentBasket.Items.FirstOrDefault(x => x.Id == request.CourseId);
 
                 if (existingItem is not null)
                 {
-                    currentBasket.BasketItems.Remove(existingItem);
+                    currentBasket.Items.Remove(existingItem);
                 }
 
-                currentBasket.BasketItems.Add(basketItem);
+                currentBasket.Items.Add(basketItem);
             }
 
             var updatedBasketString = JsonSerializer.Serialize(currentBasket);

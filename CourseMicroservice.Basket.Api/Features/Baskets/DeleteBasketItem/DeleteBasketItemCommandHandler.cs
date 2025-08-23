@@ -21,18 +21,18 @@ namespace CourseMicroservice.Basket.Api.Features.Baskets.DeleteBasketItem
                 return ServiceResult.ErrorAsNotFound();
             }
 
-            var basket = JsonSerializer.Deserialize<BasketDto>(basketString);
+            var basket = JsonSerializer.Deserialize<Data.Basket>(basketString);
 
-            var course = basket!.BasketItems.FirstOrDefault(x => x.CourseId == request.CourseId);
+            var course = basket!.Items.FirstOrDefault(x => x.Id == request.CourseId);
 
             if (course == null)
             {
                 return ServiceResult.ErrorAsNotFound();
             }
 
-            basket.BasketItems.Remove(course);
+            basket.Items.Remove(course);
 
-            if (basket.BasketItems.Any())
+            if (basket.Items.Any())
             {
                 await distributedCache.SetStringAsync(string.Format(BasketConsts.BasketRedisKey, userId), JsonSerializer.Serialize(basket), cancellationToken);
             }

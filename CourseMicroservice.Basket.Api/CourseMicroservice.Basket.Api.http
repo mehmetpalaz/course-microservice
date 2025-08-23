@@ -8,7 +8,7 @@ Content-Type: application/json
 {
   "courseId": "{{courseId}}",
   "courseName": "deneme kurs",
-  "coursePrice": 1040,
+  "price": 1040,
   "imageUrl": "asdf"
 }
 ###
